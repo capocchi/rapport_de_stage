@@ -28,5 +28,3 @@ foreach ($file in $SvgFiles) {
     inkscape $file.FullName --export-type=pdf --export-filename="./figures/$($file.BaseName).pdf"
 }
 
-latexmk -pdf -c
-
