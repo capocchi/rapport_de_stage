@@ -12,8 +12,6 @@ $DIR_EPS = "./figures/eps"
 
 $EpsFiles = Get-ChildItem $DIR_EPS *.eps -File
 
-Write-Host "aaaaaaaaaaaaaaaaaaaa"
-
 foreach ($file in $EpsFiles) {
     epstopdf $file.FullName
     Copy-Item "./figures/eps/$($file.BaseName).pdf"  -Destination ./figures -Force

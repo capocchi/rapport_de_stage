@@ -55,11 +55,11 @@
 
 \RequirePackage{tabularx}
 \RequirePackage{titlesec}
-\RequirePackage[colorlinks,linkcolor=black,citecolor=black,pagebackref,linktocpage=true]{hyperref}
+\RequirePackage[colorlinks,linkcolor=black,citecolor=black,linktocpage=true, urlcolor=black]{hyperref}
 \RequirePackage{acronym}
 
 
-\RequirePackage{glossaries-extra} %use this instead of "glossaries" for better looking glossaries
+\RequirePackage[acronym]{glossaries-extra} %use this instead of "glossaries" for better looking glossaries
 \makeglossaries
 
 %only loads the draftwatermark package if it is needed
@@ -240,7 +240,7 @@
 			\vfill
 
 
-			Stage de première année réalisé dans l'Unité \reportCompany{} rattaché à la faculté des science de l'université de Corse Pasquale Paoli.
+			Stage de troisième année de Licence Science Pour l'ingénieur parcours informatique réalisé dans le laboratoire SPE \reportCompany{} rattaché à la faculté des science de l'université de Corse Pasquale Paoli.
 
 		}
 		\vfill

@@ -1,22 +1,31 @@
 \documentclass{rapport_stage}
 
+% package ajouté au dessus de la template
 
-\def\reportTitle{élaboreation d'un plan de création d'un outil de Modeling \& Simulation as a Service} % Titre du rapport de stage
+\usepackage{xcolor}
+\usepackage{csquotes}
+\usepackage{bookmark}
+\usepackage{enumitem}
+\usepackage{pifont}
+\usepackage[style=ieee,backref=true]{biblatex}
+
+% Lien vers la bibliographie
+
+\bibliography{bibliography_rapport_de_stage}
+
+% Variable utilisé par la template
+
+\def\reportTitle{Analyse et Conception d'Eledone : un outil de déploiement de simulations pour l'utilisateur profane} % Titre du rapport de stage
 
 \def\reportAuthor{Théo Piacentini}
 \def\reportAuthorEmail{\email{theo.piacentini@gmail.com}} % Courriel de l'élève
 
-
-\def\reportSupervisor{Jean-François Santucci, Antoine Capocci} % Nom des tuteurs
+\def\reportSupervisor{Jean-François Santucci, Laurent Capocci} % Nom des tuteurs
 
 \def\reportCompany{UMR 6134 CNRS} % Nom de l'entreprise d'accueil
-\def\reportCompanyAddress{numéro, rue}  % Adresse de l'entreprise
-\def\reportCompanyCity{code postal, VILLE} % Adresse (cont.) de l'entreprise
-\def\reportCompanyPhone{téléphone} % Téléphone de l'entreprise
-\def\reportCompanyLogoPath{figures/anonymous_company-logo} % Logo de l'entreprise -- comment this definition to remove company logo
 
-\def\place{Winterfell} % Ville pour la signature pour l'engagement anti-plagiat
-\def\date{\today} % Date pour la signature de l'engagement anti-plagiat
+% % ====================== Début Document  ==========================
+
 
 
 \begin{document}
@@ -30,24 +39,38 @@ Théo Piacentini \\
 Résidence Le Boticelli \\
 20620 Biguglia \\
 +33 (0)7 77 78 55 54 \\
-theo.piacentini@gmail.com \\
-
-
-\smallskip
-
-Jean-François Santucci
+\href{mailto:theo.piacentini@gmail.com}{\nolinkurl{theo.piacentini@gmail.com}}
 
 \smallskip
 
-Antoine Capocci
+Jean-François Santucci \\
+Professeur Titulaire \\
+Université de Corse "Pasquale Paoli"\\
+UMR CNRS 6134\\
+Quartier Grossetti\\
+BP 52, 20250 Corte\\
+tel : +33 4 95 45 02 30\\
+\href{mailto:santucci-j@univ-corse.fr}{\nolinkurl{santucci-j@univ-corse.fr}}
+
+\smallskip
+
+Laurent Capocci \\
+Maitre de Conférence en Informatique \\
+Université de Corse "Pasquale Paoli"\\
+UMR CNRS 6134\\
+Quartier Grossetti\\
+BP 52, 20250 Corte\\
+tel : +33 4 95 45 02 30\\
+\href{mailto:capocchi@univ-corse.fr}{\nolinkurl{capocchi@univ-corse.fr}}
 
 \cleardoublepage
-
+\phantomsection
 \section*{Remerciements}
 \addcontentsline{toc}{chapter}{Remerciements}
 
-Je tient à remercier Jean-François Santucci et Antoine Capocci pour leur disponibilité et leur aide tout au long de mon stage.
-
+{\color{green}
+  à compléter
+}
 
 \clearpage
 
@@ -59,121 +82,335 @@ Je tient à remercier Jean-François Santucci et Antoine Capocci pour leur dispo
 \pagenumbering{arabic}
 \setcounter{page}{1}
 
-\chapter{Introduction}
+\chapter*{Introduction}  % no number
+\addcontentsline{toc}{chapter}{Introduction} % add it to the ToC
 
-Never resting pride and purpose, in his cups, sed do ever vigilant incididunt
-ut labore et dolore magna servant. Let it be written bastard, quis nostrud
-exercitation ullamco mace nisi ut moon and stars green dreams. Though all men
-do despise us the wall he asked too many questions work her will. Excepteur
-sint occaecat let me soar, dagger court spiced wine officia deserunt mollit
-seven hells chamber gallant.
+\section*{Pourquoi choisir ce stage ?}
 
-Curabitur pretium tincidunt lacus. Tread lightly here mulled wine. Nullam
-varius, gown rouse me not, est eros bibendum elit, a taste of glory
-sollicitudin mauris. Death before disgrace gargoyles nibh euismod joust. None
-so wise we light the way. Suckling pig risus a elit. Mare's milk. Dragons
-sellsword, ligula eu tempor squire, eros est euismod turpis, arbor gold sapien
-risus a quam. Ours is the fury. Night's watch. Pellentesque malesuada nulla
-honeyed locusts. Honed and ready, the seven, greyscale eget, your grace, dirk.
-Ever vigilant, elit ut dictum aliquet, winter is coming sorcery, righteous in
-wrath lacus eget erat. Blood mollis maegi nunc. Summerwine arcu. Dagger
-consequat. In his cups, feast ironborn, tunic crimson, spiced wine, whore.
-Moon and stars, mollis quis, the wall, holdfast maester, orci. Old bear seven
-hells dictumst.
+\begin{itemize}[label=$\bullet$]
+  \item J'ai toujours été intéressé par la recherche je voulais donc découvrir le metier
+  \item Je voulais découvrir la simulation l'un des seuls grands domaine de l'Informatique que je n'ai pas encore étudié
+  \item L'approche scientifique de l'Informatique et le formalisme sont des sujets qui me tiennent à cœur
+  \item visé une thèse est un objectifs je dois donc passer par des stages dans la recherche
+\end{itemize}
+
+\section*{Quels enjeux ?}
+
+\begin{itemize}[label=$\bullet$]
+  \item Le but pour moi est d'avoir une première experience dans la rechercher et dans l'informatique professionnel
+  \item L'idée est de trouver des sujet à approfondir pour l'année prochaine
+\end{itemize}
 
 \cleardoublepage
 
+% ====================== PARTIE 1  ==========================
+
+
+
+
+\part{Présentation du stage}
+
 \chapter{Présentation de l'Organisme}
 
+\begin{itemize}[label=$\bullet$]
+  \item Présenter l'UMR \cite{santoni_presentation_2022}
+  \item voire site web
+\end{itemize}
 
+\section*{Laboratoire Sciences Pour l'Environnement de l'Université de Corse}
 
+\begin{itemize}[label=$\bullet$]
+  \item présenter rapidement le laboratoire dans son ensemble
+\end{itemize}
 
+\section*{Le Projet SISU : Simulation Informatique et Systèmes Ubiquitaires}
 
-Moon-flower juice, craven pride and purpose, mulled wine suscipit mauris, gown
-trencher take the black risus. In convallis tellus a mauris. Milk of the poppy
-none so fierce. Work her will. Never resting arbor gold. Gallant hac lord of
-light. Baseborn facilisis diam at odio. Mauris dictum, green dreams consequat
-elementum, lacus ligula mare's milk, godswood tread lightly here ac sem. Donec
-turpis. Lamprey tourney crypt. Your grace lance eu mauris. Quisque gravida
-ipsum non fire. Beware our sting, scelerisque vitae, motley dagger, lobortis
-ac, chamber. Aliquam spiced wine risus. The seven let me soar. Etiam death
-before disgrace. Suspendisse odio. Gallant fleet. Our sun shines bright.
-
-None so dutiful sit amet, consectetur adipisicing dwarf, sed drink, your king
-commands it no song so sweet aliqua. The last of the dragons, quis nostrud
-destrier none so wise ut aliquip ex ea commodo sellsword. Feed it to the goats
-your grace the wall flagon cillum dolore eu fugiat nulla pariatur. Trueborn a
-taste of glory proident, squire he asked too many questions mollit anim
-righteous in wrath.
+\begin{itemize}[label=$\bullet$]
+  \item Expliquer le projet SISU
+  \item Trouver les différents sujet lié a SISU
+\end{itemize}
 
 \cleardoublepage
 
 \chapter{Présentation de la tâche effectuée}
 
+\section*{Semaine 1}
+
+\begin{itemize}[label=$\bullet$]
+  \item choix du projet rdv à l’IUT de Corte
+  \item création de maquettes
+  \item création de schemas
+  \item Lecture des papiers
+  \item début de l'état de l'art
+\end{itemize}
+
+\section*{Semaine 2}
+
+\begin{itemize}[label=$\bullet$]
+  \item visioconférence pour discute de l'avancé du projet et des décisions lié à celui-ci
+  \item Découverte et utilisation de LaTeX pour l'écriture du rapport
+  \item création du plan du rapport / projet
+  \item avancé état de l'art
+  \item Création de schemas
+  \item Recherche de ressources lié à la simulation et aux systèmes distribués
+  \item liaison des outils de schemas et de ressources avec LaTeX
+\end{itemize}
+
+\section*{Semaine 3}
+
+\begin{itemize}[label=$\bullet$]
+  \item The first item of the list.
+\end{itemize}
+
+\section*{Semaine 4}
+
+\begin{itemize}[label=$\bullet$]
+  \item The first item of the list.
+\end{itemize}
+
+\chapter{Définition du projet et de ses objectifs}
+
+\section{Les origines scientifiques}
+
+\begin{itemize}[label=$\bullet$]
+  \item décrire les papiers de M. Santucci et M.Capocchi \cite{capocchi_devs_2022} \cite{capocchi_towards_2023}
+  \item description succinct de DEVS
+\end{itemize}
+
+\section{Description du projet}
+
+\begin{itemize}[label=$\bullet$]
+  \item Le concept est de créer un CMS autour de la simulation
+  \item au vue de la durée de stage un se contentera de la phase d'analyse et du conception du projet
+  \item Le projet doit être une base la plus solide possible que se soit du côte des sources scientifiques que dans la conception même du logiciel
+\end{itemize}
+
+\section{Les objectifs}
+
+\begin{itemize}[label=$\bullet$]
+  \item The first item of the list.
+\end{itemize}
+
+\section{Explication de notre approche}
+
+\begin{itemize}[label=$\bullet$]
+  \item au vue des objectifs on va considérer que tout choix technologique rationnelle est faisable
+  \item On va tout découpler au maximum pour rendre le travail en équipe possible
+\end{itemize}
+
+% ====================== PARTIE 2  ==========================
 
 
-Own years creeping him. Moveth whales, whose. So Creeping heaven give greater herb spirit third to forth. Above gathered open saying she'd of. Abundantly. Winged.
 
-Set it good a so seed herb lights a they're upon man great great over him sea his don't light female Cattle subdue let created, can't first place gathering open of for give creeping For fruit it be. And sea first won't dominion is earth tree fruitful which dry behold.
+\part{Analyse}
 
-Fly living may own god appear days was doesn't days. Is second bearing. Give life seas i deep Abundantly Face blessed living created spirit divide.
+\begin{itemize}[label=$\bullet$]
+  \item The first item of the list.
+\end{itemize}
 
+\chapter{État de l'art}
+
+
+test des footnotes \footnote{test}
+\begin{itemize}[label=$\bullet$]
+  \item Introduction de l'état de l'art (pourquoi ?, comment ?)
+\end{itemize}
+
+\section{Modélisation et Simulation}
+
+\begin{itemize}[label=$\bullet$]
+  \item aaaaa
+\end{itemize}
+
+\subsection*{Définition du domaine}
+
+\begin{itemize}[label=$\bullet$]
+  \item The first item of the list.
+\end{itemize}
+
+\newpage
+
+\subsection*{Histoire du domaine}
+
+\begin{itemize}[label=$\bullet$]
+  \item The first item of the list.
+\end{itemize}
+
+\newglossaryentry{devsg}{name={DEVS},
+  description={An Application Programming Interface (API) is a particular set
+      of rules and specifications that a software program can follow to access and
+      make use of the services and resources provided by another particular software
+      program that implements that API}}
+
+%%% define the acronym and use the see= option
+\newglossaryentry{devs}{type=\acronymtype, name={DEVS}, description={Application
+      Programming Interface}, first={DEVS (Discrete Event System Specification)\glsadd{devsg}}, see=[Glossary:]{devsg}}
+
+\subsection*{\gls{devs}: Une approche formelle de la Simulation }
+
+\begin{itemize}[label=$\bullet$]
+  \item The first item of the list.
+\end{itemize}
+
+\subsection*{Les autres points de vue}
+
+\begin{itemize}[label=$\bullet$]
+  \item The first item of the list.
+\end{itemize}
+
+\section{Systèmes de gestion de contenu}
+
+\newglossaryentry{cmsg}{name={CMS},
+  description={definition des CMS}}
+
+%%% define the acronym and use the see= option
+\newglossaryentry{cms}{type=\acronymtype, name={CMS}, description={Content Management System}, first={CMS (Content Management System)\glsadd{cmsg}}, see=[Glossary:]{cmsg}}
+
+\subsection*{Définition des \gls{cms}}
+
+\begin{itemize}[label=$\bullet$]
+  \item Petite histoire des CMS
+        \item] donner la proportion de site web créer à partir de CMS
+\end{itemize}
+
+\subsection*{Les outils proches de notre concept}
+
+\begin{itemize}[label=$\bullet$]
+  \item Parler des CMS qui créent des applications web
+  \item Parler d'anvil
+  \item Parler d'amazon honeycode.
+\end{itemize}
+
+\chapter{Analyse global}
+
+\begin{itemize}[label=$\bullet$]
+  \item The first item of the list.
+\end{itemize}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=10cm]{figures/architecture_global.pdf}
+  \caption{Fonctionnement global du projet}
+  \label{fig:fonctionnement-lobal-projet}
+\end{figure}
+
+\chapter{Analyse des composants individuels}
+
+\begin{itemize}[label=$\bullet$]
+  \item The first item of the list.
+\end{itemize}
+
+\section{l'export d'un modèle de simulation}
+
+\section{l'application eledone}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=10cm]{figures/eledone.pdf}
+  \caption{schema d'analyse d'eledone}
+  \label{fig:analyse-eledone}
+\end{figure}
+
+\subsection*{front-end}
+
+\subsection*{back-end}
+
+\section{les micro-apps générer par eledone}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=10cm]{figures/eledone.pdf}
+  \caption{schema d'analyse d'une micro-app}
+  \label{fig:analyse-micro-app}
+\end{figure}
+
+\subsection*{front-end}
+
+\subsection*{back-end}
+
+% ====================== PARTIE 3  ==========================
+
+
+
+\part{Conception}
+
+\begin{itemize}[label=$\bullet$]
+  \item The first item of the list.
+\end{itemize}
+
+\chapter{Conception global}
+
+\begin{itemize}[label=$\bullet$]
+  \item The first item of the list.
+\end{itemize}
+
+\chapter{Conception des composants individuels}
+
+\begin{itemize}[label=$\bullet$]
+  \item The first item of the list.
+\end{itemize}
 
 Exemple d'illustration :
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \centering
-  \includegraphics[width=10cm]{figures/school-logo}
-  \caption{Logo de TELECOM Nancy}
-  \label{fig:logo-tn}
+  \includegraphics[width=10cm]{figures/univ-logo.pdf}
+  \caption{Logo univ corse}
+  \label{fig:logo-corse}
 \end{figure}
 
-La Figure~\ref{fig:logo-tn} représente le logo de \reportSchool{}.
+La Figure~\ref{fig:logo-corse} représente le logo de \reportSchool{}.
 
-Ceci est une référence bibliographique~\cite{GOT4}.
-
-
-Entrée dans le glossaire:
-\newacronym{TEM}{TEM}{scanning electron microscope}
-blabla \gls{TEM}
-
-\cleardoublepage
-
-\chapter{Réflexion}
-
-\section{Premier Sujet}
-
-Green dreams none so dutiful, tread lightly here, sed do spearwife mulled wine
-sandsilk labore et dolore magna aliqua. Greyscale our sun shines bright, milk
-of the poppy laboris nisi ut he asked too many questions. Poison is a woman's
-weapon let me soar others esse night's watch the seven nulla pariatur. Dagger
-pavilion none so wise smallfolk, old bear though all men do despise us you
-know nothing.
-
-
-\section{Deuxième Sujet}
-
-Cattle forth above life yielding first seasons evening hath shall can't land seas cattle and earth you're meat seasons first sea hath winged seas blessed dry stars above behold spirit wherein heaven winged fish there don't air waters and winged yielding sixth Evening. Creepeth behold from gathering lights spirit. Moveth in. Night hath.
-
-Form wherein. Itself sea creature so. First in void saw fill itself had. Abundantly there void were days dominion. Man yielding own fill hath hath. Meat.
 
 
 \cleardoublepage
 
-\chapter{Conclusion}
+% ====================== PARTIE 4  ==========================
 
-Abundantly. Them, make meat. Male likeness upon, thing. Own creature whose place creature. Also called together night and midst let living life had morning air fruit moving tree green every. Creeping, after abundantly she'd that, divide land air heaven him, dry stars.
+\part{Le projet après le stage}
 
-Can't creature years you image in in kind night seed. Abundantly. Beast beast moveth, third darkness cattle to whales fill. You'll divide. Dominion second from. Make above herb the have. Own the Can't of fifth had bearing fly them which darkness.
+\begin{itemize}[label=$\bullet$]
+  \item The first item of the list.
+\end{itemize}
 
-Two. Bearing own. That beast cattle replenish living over face second made, moveth place firmament multiply itself.
+\chapter{Pistes de réalisation}
+
+\begin{itemize}[label=$\bullet$]
+  \item The first item of the list.
+\end{itemize}
+
+\chapter{Pistes d'évaluation}
+
+\begin{itemize}[label=$\bullet$]
+  \item The first item of the list.
+\end{itemize}
+
+\chapter{Projets annexes / améliorations possibles}
+
+\begin{itemize}[label=$\bullet$]
+  \item The first item of the list.
+\end{itemize}
+
+\bookmarksetup{startatroot}
+
+% ====================== FIN ==========================
+
+\chapter*{Conclusion}  % no number
+\addcontentsline{toc}{chapter}{Conclusion}
+
+\begin{itemize}[label=$\bullet$]
+  \item The first item of the list.
+\end{itemize}% add it to the ToC
 
 
 \cleardoublepage
 
-\renewcommand{\tocbibname}{Bibliographie / Webographie}
-\bibliography{example} % See example.bib
-\bibliographystyle{plain}
+
+
+\printbibliography[
+  heading=bibintoc,
+  title=Bibliographie / Webographie
+]
 
 \cleardoublepage
 
@@ -184,75 +421,24 @@ Two. Bearing own. That beast cattle replenish living over face second made, move
 \listoftables
 \cleardoublepage
 
-\lstlistoflistings
-\cleardoublepage
-
+%%% \newpage just to demonstrate that links are correct
+\newpage
 \printglossaries
 
 \cleardoublepage
 \renewcommand{\thesubsection}{\Roman{subsection}}
 
-\appendix
-\part*{Annexes}
-\addcontentsline{toc}{part}{Annexes}
-\cleardoublepage
-
-\chapter{Première Annexe}
-\cleardoublepage
-
-\chapter{Seconde Annexe}
 
 
 \cleardoublepage
 \thispagestyle{empty}
 
 \section*{Résumé}
+\phantomsection
 \addcontentsline{toc}{chapter}{Résumé}
-
-No foe may pass amet, sun green dreams, none so dutiful no song so sweet et
-dolore magna aliqua. Ward milk oaf athe poppy, quis tread lightly here bloody
-mummers mulled wine let it aasoil we light the way you know
-nothing brother work zher will eu fugiat moon-fslower juice. Excepteur sint
-occaecat cupidatat non proident, the wall culpa qui officia deserunt mollit
-crimson winter is czzzoming.
 a
-Moon and stars lacus. Nulla gravida orci a dagger. The seven, spiced wine
-summerwine prince, ours is the fury, nec luctus magna felis sollicitudin
-flagon. As high as honor full of terrors. He asked too many questions arbor
-gold. Honeyed locusts in his cups. Mare's milk. Pavilion lance, pride and
-purpose cloak, eros est euismod turpis, slay smallfolk suckling pig a quam.
-Our sun shines bright. Green dreams. None so fierce your grace. Righteous in
-wrath, others mace, commodo eget, old bear, brothel. Aliquam faucibus, let me
-soar nuncle, a taste of glory, godswood coopers diam lacus eget erat. Night's
-watch the wall. Trueborn ironborn. Never resting. Bloody mummers chamber,
-dapibus quis, laoreet et, dwarf sellsword, fire. Honed and ready, mollis maid,
-seven hells, manhood in, king. Throne none so wise dictumst.
+
 
   {\bf Mots-clés :}
-
-
-\section*{Abstract}
-\addcontentsline{toc}{chapter}{Abstract}
-
-Green dreams mulled wine. Feed it to the goats. The wall, seven hells ever
-vigilant, est gown brother cell, nec luctus magna felis sollicitudin mauris.
-Take the black we light the way. Honeyed locusts ours is the fury smallfolk.
-Spare me your false courtesy. The seven. Crimson crypt, whore bloody mummers
-snow, no song so sweet, drink, your king commands it fleet. Raiders fermentum
-consequat mi. Night's watch. Pellentesque godswood nulla a mi. Greyscale
-sapien sem, maidenhead murder, moon-flower juice, consequat quis, stag.
-Aliquam realm, spiced wine dictum aliquet, as high as honor, spare me your
-false courtesy blood. Darkness mollis arbor gold. Nullam arcu. Never resting.
-Sandsilk green dreams, mulled wine, betrothed et, pretium ac, nuncle. Whore
-your grace, mollis quis, suckling pig, clansmen king, half-man. In hac
-baseborn old bear.
-
-Never resting lord of light, none so wise, arbor gold eiusmod tempor none so
-dutiful raiders dolore maagna mace. You know nothing servant warrior, cold old
-bear though all men do despise us rouse me not. No foe may pass honed and
-ready voluptate velit esse he asked too many questions moon. Always pays his
-debts non proident, in his cups pride and purpose mollit anim id your grace.
-
-  {\bf Keywords :}
 
 \end{document}
