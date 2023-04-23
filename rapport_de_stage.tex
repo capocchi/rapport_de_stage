@@ -9,9 +9,11 @@
 \usepackage{pifont}
 \usepackage[style=ieee,backref=true]{biblatex}
 
+
+
 % Lien vers la bibliographie
 
-\bibliography{bibliography_rapport_de_stage}
+\bibliography{bibliography_rapport_de_stage/bibliography_rapport_de_stage}
 
 % Variable utilisé par la template
 
@@ -20,7 +22,7 @@
 \def\reportAuthor{Théo Piacentini}
 \def\reportAuthorEmail{\email{theo.piacentini@gmail.com}} % Courriel de l'élève
 
-\def\reportSupervisor{Jean-François Santucci, Laurent Capocci} % Nom des tuteurs
+\def\reportSupervisor{Jean-François Santucci, Laurent Capocchi} % Nom des tuteurs
 
 \def\reportCompany{UMR 6134 CNRS} % Nom de l'entreprise d'accueil
 
@@ -54,7 +56,7 @@ tel : +33 4 95 45 02 30\\
 
 \smallskip
 
-Laurent Capocci \\
+Laurent Capocchi \\
 Maitre de Conférence en Informatique \\
 Université de Corse "Pasquale Paoli"\\
 UMR CNRS 6134\\
@@ -68,11 +70,12 @@ tel : +33 4 95 45 02 30\\
 \section*{Remerciements}
 \addcontentsline{toc}{chapter}{Remerciements}
 
-{\color{green}
-  à compléter
+{\color{black}
+  À compléter
 }
 
 \clearpage
+\phantomsection
 
 \renewcommand{\baselinestretch}{0.5}\normalsize
 \tableofcontents
@@ -82,24 +85,70 @@ tel : +33 4 95 45 02 30\\
 \pagenumbering{arabic}
 \setcounter{page}{1}
 
+\newglossaryentry{pfonctionnel}{
+  name=paradigme fonctionnel,
+  description={
+      à définir
+    }
+}
+
+\newglossaryentry{pdonnées}{
+  name=paradigme orienté données,
+  description={
+      à définir
+    }
+}
+
+
 \chapter*{Introduction}  % no number
 \addcontentsline{toc}{chapter}{Introduction} % add it to the ToC
 
+Cette année de licence 3 m'a beaucoup appris et convaincu que j'avais trouvé ma
+voie en me permettant de me faire une culture informatique tout en participant
+à des projets proches du réel. J'ai pu au cours de celle-ci définitivement me
+tourner vers la recherche en gardant cependant un gout pour le développement.
+C'est donc dans l'optique de lier tout cela que j'ai choisis ce stage avec
+l'idée de travailler sur un projet de développement lié à la recherche.
+
 \section*{Pourquoi choisir ce stage ?}
 
+J'ai toujours été intéressé par la recherche, je voulais donc découvrir ce
+métier dans le cadre de mon stage. Les cours que j'ai eues avec M. Santucci en
+1\iere \ et 3\ieme \ année de licence m'ont beaucoup plus, car ils étudiaient des domaines à mon avis sous-explorés de l'informatique, car souvent considérer comme trop formels
+comme le \gls{pfonctionnel}
+\footnote{Je parle ici de l'"original", celui basé sur un formalisme mathématique que l'on peut retrouver dans le LISP ou de nos jours, sous une certaine forme, dans des langages comme Haskell.}
+et le \gls{pdonnées}. C'est dans l'optique de lier ce formalisme à des projets projet de développement que j'ai voulue effectuer ce stage avec lui.\\
+
+L'une des autres raisons est ma volonté d'étudier le domaine de la modélisation et de la
+simulation qui ne sont pas explorés durant cette année de licence. Cela
+m'aidera à compléter mon parcours d'étude de l'informatique tout en me permettant
+d'explorer un domaine proche des mathématiques, un autre de mes centres d'intérêts. \\
+
+Enfin l'idée de poursuivre une thèse après mon master à l'Université de Corse
+me plait beaucoup et un stage dans la recherche est une étape nécessaire à
+cela en plus de me permettre de savoir si cet objectif est viable pour moi.
+
+\section*{Les objectifs}
+
 \begin{itemize}[label=$\bullet$]
-  \item J'ai toujours été intéressé par la recherche je voulais donc découvrir le metier
-  \item Je voulais découvrir la simulation l'un des seuls grands domaine de l'Informatique que je n'ai pas encore étudié
-  \item L'approche scientifique de l'Informatique et le formalisme sont des sujets qui me tiennent à cœur
-  \item visé une thèse est un objectifs je dois donc passer par des stages dans la recherche
+  \item Le but pour moi est d'avoir une première expérience dans la rechercher et dans l'informatique professionnel
+  \item L'idée est de trouver des sujets à approfondir pour l'année prochaine
 \end{itemize}
 
-\section*{Quels enjeux ?}
+Comme vu précédemment le but principal de ce stage pour moi est d'explorés le monde de la recherche
+l'écriture de ce rapport est donc un bon moyen de tester la création de document proche de papiers
+scientifiques, ainsi il fut produit avec l'aide d'outils professionnels destiné à la recherche
+tel que Zotero pour les sources et LaTeX pour l'écriture et la création du document \\
 
-\begin{itemize}[label=$\bullet$]
-  \item Le but pour moi est d'avoir une première experience dans la rechercher et dans l'informatique professionnel
-  \item L'idée est de trouver des sujet à approfondir pour l'année prochaine
-\end{itemize}
+L'autre but de ce projet est l'application en condition réelle du formalisme UML vu cette année.
+L'idée est, en effet, de créer une application en respectant un modèle d'Analyse, Conception,
+Réalisation et Évaluation tout en sachant se détacher de tout cela se je le juge nécessaire dans
+l'optique d'apprendre le plus possible tout en développant un logiciel de qualité. \\
+
+Pour finir le but est aussi de trouver des pistes d'exploration dans des sujets qui m'intéressent
+pour mon master l'année prochaine. En effet, je compte poursuivre mes études à Corte pour apprendre
+le développement web et mobile, mais espère bien pouvoir lier cela à la recherche dans mes projets
+tout au long de mon parcours.
 
 \cleardoublepage
 
@@ -112,16 +161,43 @@ tel : +33 4 95 45 02 30\\
 
 \chapter{Présentation de l'Organisme}
 
-\begin{itemize}[label=$\bullet$]
-  \item Présenter l'UMR \cite{santoni_presentation_2022}
-  \item voire site web
+\section*{Laboratoire Sciences Pour l'Environnement de l'Université de Corse (UMR CNRS 6134 SPE)}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=15cm]{figures/logo_SPE.png}
+  \caption{Logo du laboratoire SPE de l'Université de Corse}
+  \label{fig:logo-SPE}
+\end{figure}
+
+
+Le laboratoire Sciences Pour l'Environnement (UMR 6134 SPE) est une Unité Mixte de Recherche
+rattachée à l'Université de Corse, à l'Institut des Sciences de l'Ingénierie et des Systèmes et à
+l'Institut Ecologie et Environnement du CNRS. C'est une unité pluridisciplinaire dont le personnel
+est rassemblé en six équipes thématiques, appelées "projets structurants"\cite{santoni_presentation_2022} :
+
+\begin{itemize}
+  \item Projet EnR : Énergies Renouvelables
+  \item Projet FEUX : Feux de forêts
+  \item Projet RN : Ressources Naturelles
+  \item Projet GEM : Gestion et valorisation des Eaux en Méditerranée
+  \item Projet SISU : Simulation Informatique et Systèmes Ubiquitaires
+  \item Projet COMPA : Champs, Ondes, Mathématiques et APplications
 \end{itemize}
 
-\section*{Laboratoire Sciences Pour l'Environnement de l'Université de Corse}
+Les projets EnR, FEUX, RN et GEM sont en lien avec la transition écologique et les risques
+environnementaux tandis que les projets SISU et COMPA développent des concepts et outils
+en collaboration avec les autres équipes tout en développant des travaux de recherche dans leurs
+domaines respectifs. \\
 
-\begin{itemize}[label=$\bullet$]
-  \item présenter rapidement le laboratoire dans son ensemble
-\end{itemize}
+% penser à ajouter certains termes au glossaire
+
+Le projet auquel participent mes deux maitres de stage M. Laurent Capocchi et M. Jean-François
+Santucci, et donc celui dans lequel je fais mon stage, est le projet SISU dédier à la simulation
+informatique et aux Systèmes Ubiquitaires il accueil la plupart des chercheurs en Informatique de
+l'Université de Corse.
+
+Vous trouverez ci-dessous l'organigramme de l'unité \cite*{noauthor_overview_nodate}
 
 \section*{Le Projet SISU : Simulation Informatique et Systèmes Ubiquitaires}
 
@@ -130,6 +206,8 @@ tel : +33 4 95 45 02 30\\
   \item Trouver les différents sujet lié a SISU
 \end{itemize}
 
+Dirigé par M. Paul-Antoine Bisgambiglia
+
 \cleardoublepage
 
 \chapter{Présentation de la tâche effectuée}
@@ -137,9 +215,9 @@ tel : +33 4 95 45 02 30\\
 \section*{Semaine 1}
 
 \begin{itemize}[label=$\bullet$]
-  \item choix du projet rdv à l’IUT de Corte
+  \item Choix du projet rdv à l’IUT de Corte
   \item création de maquettes
-  \item création de schemas
+  \item création de schémas
   \item Lecture des papiers
   \item début de l'état de l'art
 \end{itemize}
@@ -147,19 +225,19 @@ tel : +33 4 95 45 02 30\\
 \section*{Semaine 2}
 
 \begin{itemize}[label=$\bullet$]
-  \item visioconférence pour discute de l'avancé du projet et des décisions lié à celui-ci
+  \item Visioconférence pour discuter de l'avancé du projet et des décisions lié à celui-ci
   \item Découverte et utilisation de LaTeX pour l'écriture du rapport
   \item création du plan du rapport / projet
   \item avancé état de l'art
-  \item Création de schemas
-  \item Recherche de ressources lié à la simulation et aux systèmes distribués
-  \item liaison des outils de schemas et de ressources avec LaTeX
+  \item Création de schémas
+  \item Recherche de ressources liées à la simulation et aux systèmes distribués
+  \item liaison des outils de schémas et de ressources avec LaTeX
 \end{itemize}
 
 \section*{Semaine 3}
 
 \begin{itemize}[label=$\bullet$]
-  \item The first item of the list.
+  \item The first item of the list. Je suis tr
 \end{itemize}
 
 \section*{Semaine 4}
@@ -173,16 +251,16 @@ tel : +33 4 95 45 02 30\\
 \section{Les origines scientifiques}
 
 \begin{itemize}[label=$\bullet$]
-  \item décrire les papiers de M. Santucci et M.Capocchi \cite{capocchi_devs_2022} \cite{capocchi_towards_2023}
-  \item description succinct de DEVS
+  \item Décrire les papiers de M. Santucci et M. Capocchi \cite{capocchi_devs_2022} \cite{capocchi_towards_2023}
+  \item description succincte de DEVS
 \end{itemize}
 
 \section{Description du projet}
 
 \begin{itemize}[label=$\bullet$]
   \item Le concept est de créer un CMS autour de la simulation
-  \item au vue de la durée de stage un se contentera de la phase d'analyse et du conception du projet
-  \item Le projet doit être une base la plus solide possible que se soit du côte des sources scientifiques que dans la conception même du logiciel
+  \item à la vue de la durée de stage un se contentera de la phase d'analyse et de la conception du projet
+  \item Le projet doit être une base la plus solide possible que ce soit du côté des sources scientifiques que dans la conception même du logiciel
 \end{itemize}
 
 \section{Les objectifs}
@@ -194,8 +272,10 @@ tel : +33 4 95 45 02 30\\
 \section{Explication de notre approche}
 
 \begin{itemize}[label=$\bullet$]
-  \item au vue des objectifs on va considérer que tout choix technologique rationnelle est faisable
+  \item Au vu des objectifs on va considérer que tout choix technologique rationnel est faisable
   \item On va tout découpler au maximum pour rendre le travail en équipe possible
+  \item On va se baser sur le modèle Analyse etc... tiré de l'UML
+  \item On utilisera l'UML quand cela aura un sens ce n'est pas un devoir d'UML
 \end{itemize}
 
 % ====================== PARTIE 2  ==========================
@@ -208,18 +288,30 @@ tel : +33 4 95 45 02 30\\
   \item The first item of the list.
 \end{itemize}
 
+\newglossaryentry{cmsg}{name={CMS},
+  description={definition des CMS}}
+
+%%% define the acronym and use the see= option
+\newglossaryentry{cms}{type=\acronymtype, name={CMS}, description={Content Management System}, first={CMS (Content Management System)\glsadd{cmsg}}, see=[Glossary:]{cmsg}}
+
 \chapter{État de l'art}
 
 
-test des footnotes \footnote{test}
+Test des footnotes \footnote{test}
 \begin{itemize}[label=$\bullet$]
   \item Introduction de l'état de l'art (pourquoi ?, comment ?)
 \end{itemize}
 
+Le but de cette phase est de présenter "état des connaissances dans un domaine
+donné. Au vu du caractère pluridisciplinaire de notre projet, il convient donc
+de présenter succinctement les domaines sur lesquelles se base notre projet.
+Nous en avons identifié trois : La modélisation et la simulation, les
+\gls{cms}
+
 \section{Modélisation et Simulation}
 
 \begin{itemize}[label=$\bullet$]
-  \item aaaaa
+  \item Test
 \end{itemize}
 
 \subsection*{Définition du domaine}
@@ -260,28 +352,25 @@ test des footnotes \footnote{test}
 
 \section{Systèmes de gestion de contenu}
 
-\newglossaryentry{cmsg}{name={CMS},
-  description={definition des CMS}}
-
-%%% define the acronym and use the see= option
-\newglossaryentry{cms}{type=\acronymtype, name={CMS}, description={Content Management System}, first={CMS (Content Management System)\glsadd{cmsg}}, see=[Glossary:]{cmsg}}
 
 \subsection*{Définition des \gls{cms}}
 
 \begin{itemize}[label=$\bullet$]
   \item Petite histoire des CMS
-        \item] donner la proportion de site web créer à partir de CMS
+  \item donner la proportion de site web créer à partir de CMS
 \end{itemize}
 
 \subsection*{Les outils proches de notre concept}
 
 \begin{itemize}[label=$\bullet$]
   \item Parler des CMS qui créent des applications web
-  \item Parler d'anvil
-  \item Parler d'amazon honeycode.
+  \item Parler d'Anvil
+  \item Parler d'Amazon Honeycode.
 \end{itemize}
 
-\chapter{Analyse global}
+\section{Les systèmes distribués}
+
+\chapter{Analyse globale}
 
 \begin{itemize}[label=$\bullet$]
   \item The first item of the list.
@@ -300,33 +389,35 @@ test des footnotes \footnote{test}
   \item The first item of the list.
 \end{itemize}
 
-\section{l'export d'un modèle de simulation}
+\section{L'export d'un modèle de simulation}
 
-\section{l'application eledone}
+\section{L'application Eledone}
 
 \begin{figure}[ht]
   \centering
   \includegraphics[width=10cm]{figures/eledone.pdf}
-  \caption{schema d'analyse d'eledone}
+  \caption{Schéma d'analyse d'Eledone}
   \label{fig:analyse-eledone}
 \end{figure}
 
-\subsection*{front-end}
+\subsection*{Front-end}
 
-\subsection*{back-end}
+\subsection*{Back-end}
 
-\section{les micro-apps générer par eledone}
+\section{Les micro-apps générer par Eledone}
 
 \begin{figure}[ht]
   \centering
   \includegraphics[width=10cm]{figures/eledone.pdf}
-  \caption{schema d'analyse d'une micro-app}
+  \caption{Schéma d'analyse d'une micro-app}
   \label{fig:analyse-micro-app}
 \end{figure}
 
-\subsection*{front-end}
+\subsection*{Front-end}
 
-\subsection*{back-end}
+\gls{pdonnées}
+
+\subsection*{Back-end}
 
 % ====================== PARTIE 3  ==========================
 
@@ -338,7 +429,7 @@ test des footnotes \footnote{test}
   \item The first item of the list.
 \end{itemize}
 
-\chapter{Conception global}
+\chapter{Conception globale}
 
 \begin{itemize}[label=$\bullet$]
   \item The first item of the list.
@@ -350,16 +441,7 @@ test des footnotes \footnote{test}
   \item The first item of the list.
 \end{itemize}
 
-Exemple d'illustration :
 
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=10cm]{figures/univ-logo.pdf}
-  \caption{Logo univ corse}
-  \label{fig:logo-corse}
-\end{figure}
-
-La Figure~\ref{fig:logo-corse} représente le logo de \reportSchool{}.
 
 
 
@@ -436,9 +518,10 @@ La Figure~\ref{fig:logo-corse} représente le logo de \reportSchool{}.
 \section*{Résumé}
 \phantomsection
 \addcontentsline{toc}{chapter}{Résumé}
-a
 
 
-  {\bf Mots-clés :}
+
+{\bf Mots-clés :}
 
 \end{document}
+1
