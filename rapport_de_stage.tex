@@ -70,8 +70,8 @@ tel : +33 4 95 45 02 30\\
 \section*{Remerciements}
 \addcontentsline{toc}{chapter}{Remerciements}
 
-{\color{black}
-  À compléter
+{\color{green}
+  À compléter à la fin
 }
 
 \clearpage
@@ -103,21 +103,23 @@ tel : +33 4 95 45 02 30\\
 \chapter*{Introduction}  % no number
 \addcontentsline{toc}{chapter}{Introduction} % add it to the ToC
 
-Cette année de licence 3 m'a beaucoup appris et convaincu que j'avais trouvé ma
-voie en me permettant de me faire une culture informatique tout en participant
-à des projets proches du réel. J'ai pu au cours de celle-ci définitivement me
-tourner vers la recherche en gardant cependant un gout pour le développement.
-C'est donc dans l'optique de lier tout cela que j'ai choisis ce stage avec
-l'idée de travailler sur un projet de développement lié à la recherche.
+Cette année de licence 3 m'a beaucoup appris et convaincu que j'avais trouvé ma voie en me
+permettant de me faire une culture informatique tout en participant à des projets proches du réel.
+J'ai pu au cours de celle-ci définitivement me tourner vers la recherche en gardant cependant un
+gout pour le développement. C'est donc dans l'optique de lier tout cela que j'ai choisis ce stage
+avec l'idée de travailler sur un projet de développement lié à la recherche.
 
 \section*{Pourquoi choisir ce stage ?}
 
 J'ai toujours été intéressé par la recherche, je voulais donc découvrir ce
 métier dans le cadre de mon stage. Les cours que j'ai eues avec M. Santucci en
-1\iere \ et 3\ieme \ année de licence m'ont beaucoup plus, car ils étudiaient des domaines à mon avis sous-explorés de l'informatique, car souvent considérer comme trop formels
+1\iere \ et 3\ieme \ année de licence m'ont beaucoup plus, car ils étudiaient des domaines à mon
+avis sous-explorés de l'informatique, car souvent considérer comme trop formels
 comme le \gls{pfonctionnel}
-\footnote{Je parle ici de l'"original", celui basé sur un formalisme mathématique que l'on peut retrouver dans le LISP ou de nos jours, sous une certaine forme, dans des langages comme Haskell.}
-et le \gls{pdonnées}. C'est dans l'optique de lier ce formalisme à des projets projet de développement que j'ai voulue effectuer ce stage avec lui.\\
+\footnote{Je parle ici de l'"original", celui basé sur un formalisme mathématique que l'on peut
+  retrouver dans le LISP ou de nos jours, sous une certaine forme, dans des langages comme Haskell.}
+et le \gls{pdonnées}. C'est dans l'optique de lier ce formalisme à des projets projet de
+développement que j'ai voulue effectuer ce stage avec lui.\\
 
 L'une des autres raisons est ma volonté d'étudier le domaine de la modélisation et de la
 simulation qui ne sont pas explorés durant cette année de licence. Cela
@@ -173,8 +175,9 @@ tout au long de mon parcours.
 
 Le laboratoire Sciences Pour l'Environnement (UMR 6134 SPE) est une Unité Mixte de Recherche
 rattachée à l'Université de Corse, à l'Institut des Sciences de l'Ingénierie et des Systèmes et à
-l'Institut Ecologie et Environnement du CNRS. C'est une unité pluridisciplinaire dont le personnel
-est rassemblé en six équipes thématiques, appelées "projets structurants"\cite{santoni_presentation_2022} :
+l'Institut Écologie et Environnement du CNRS. C'est une unité pluridisciplinaire dont le personnel
+est rassemblé en six équipes thématiques, appelées "projets structurants"
+\cite{santoni_presentation_2022} :
 
 \begin{itemize}
   \item Projet EnR : Énergies Renouvelables
@@ -194,10 +197,16 @@ domaines respectifs. \\
 
 Le projet auquel participent mes deux maitres de stage M. Laurent Capocchi et M. Jean-François
 Santucci, et donc celui dans lequel je fais mon stage, est le projet SISU dédier à la simulation
-informatique et aux Systèmes Ubiquitaires il accueil la plupart des chercheurs en Informatique de
+informatique et aux Systèmes Ubiquitaires il accueille la plupart des chercheurs en Informatique de
 l'Université de Corse.
 
-Vous trouverez ci-dessous l'organigramme de l'unité \cite*{noauthor_overview_nodate}
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=15cm]{figures/Organigramme_UMR.pdf}
+  \caption{Organigramme du laboratoire SPE de l'Université de Corse \cite{santoni_presentation_2022}}
+  \label{fig:Organigramme-SPE}
+\end{figure}
+
 
 \section*{Le Projet SISU : Simulation Informatique et Systèmes Ubiquitaires}
 
@@ -206,16 +215,30 @@ Vous trouverez ci-dessous l'organigramme de l'unité \cite*{noauthor_overview_no
   \item Trouver les différents sujet lié a SISU
 \end{itemize}
 
-Dirigé par M. Paul-Antoine Bisgambiglia
+Dirigé par M. Paul-Antoine Bisgambiglia, le projet SISU est constitué de deux approches :
+L'aspect scientifique du projet qui est fondé sur la définition d'une approche générique de
+Modélisation et Simulation de systèmes complexes tandis que l'aspect technologique concerne
+la mise en œuvre des concepts et outils dans le cadre d'application concrète.
+
+Dans ce projet le travail de M. Capocchi et M. Santucci concerne plutôt la première partie
+auquel ils participent principalement par le biais de papiers lié au formalisme DEVS
+\cite{capocchi_devs_2022} \cite{capocchi_towards_2023} et au développement d'un logiciel aidant à
+la création de modèle de simulation : DevSimPy \cite{l_what_2023}. Le stage que j'ai effectué
+s'est donc déroulé dans leur équipe et le projet que je vous présente avec ce rapport fait suite
+à leur travail.
 
 \cleardoublepage
 
 \chapter{Présentation de la tâche effectuée}
 
+ {\color{green}
+  À compléter à la fin
+ }
+
 \section*{Semaine 1}
 
 \begin{itemize}[label=$\bullet$]
-  \item Choix du projet rdv à l’IUT de Corte
+  \item Choix du projet rdv à l'IUT de Corte
   \item création de maquettes
   \item création de schémas
   \item Lecture des papiers
