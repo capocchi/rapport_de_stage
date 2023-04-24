@@ -297,9 +297,32 @@ s'est donc déroulé dans leur équipe et le projet que je vous présente avec c
 \begin{itemize}[label=$\bullet$]
   \item Au vu des objectifs on va considérer que tout choix technologique rationnel est faisable
   \item On va tout découpler au maximum pour rendre le travail en équipe possible
-  \item On va se baser sur le modèle Analyse etc... tiré de l'UML
+  \item On va se baser sur le modèle Analyse etc. tiré de l'UML
   \item On utilisera l'UML quand cela aura un sens ce n'est pas un devoir d'UML
+  \item sourcé la méthode d'Analyse par un livre théorique \cite*{lonchamp_analyse_2015}
 \end{itemize}
+
+
+
+\bookmarksetup{startatroot}
+
+% ====================== FIN ==========================
+
+\chapter*{Conclusion}  % no number
+\addcontentsline{toc}{chapter}{Conclusion}
+
+{ \color{green}
+  À faire à la fin
+}
+
+\begin{itemize}[label=$\bullet$]
+  \item The first item of the list.
+\end{itemize}% add it to the ToC
+
+
+\appendix
+
+
 
 % ====================== PARTIE 2  ==========================
 
@@ -320,7 +343,6 @@ s'est donc déroulé dans leur équipe et le projet que je vous présente avec c
 \chapter{État de l'art}
 
 
-Test des footnotes \footnote{test}
 \begin{itemize}[label=$\bullet$]
   \item Introduction de l'état de l'art (pourquoi ?, comment ?)
 \end{itemize}
@@ -334,13 +356,13 @@ Nous en avons identifié trois : La modélisation et la simulation, les
 \section{Modélisation et Simulation}
 
 \begin{itemize}[label=$\bullet$]
-  \item Test
+  \item Parler de la place du domaine dans l'informatique et les sciences en général
 \end{itemize}
 
 \subsection*{Définition du domaine}
 
 \begin{itemize}[label=$\bullet$]
-  \item The first item of the list.
+  \item Présenter le domaine dans son ensemble \cite{oren_body_2023}
 \end{itemize}
 
 \newpage
@@ -348,7 +370,7 @@ Nous en avons identifié trois : La modélisation et la simulation, les
 \subsection*{Histoire du domaine}
 
 \begin{itemize}[label=$\bullet$]
-  \item The first item of the list.
+  \item Trouver une bonne source pour faire l'historique
 \end{itemize}
 
 \newglossaryentry{devsg}{name={DEVS},
@@ -364,13 +386,13 @@ Nous en avons identifié trois : La modélisation et la simulation, les
 \subsection*{\gls{devs}: Une approche formelle de la Simulation }
 
 \begin{itemize}[label=$\bullet$]
-  \item The first item of the list.
+  \item Utiliser le livre de Ziegler pour définir DEVS \cite{zeigler_theory_2019}
 \end{itemize}
 
 \subsection*{Les autres points de vue}
 
 \begin{itemize}[label=$\bullet$]
-  \item The first item of the list.
+  \item Présenter l'utilisation de la simulation dans des contextes moins formels dans d'autres sciences pour faire le lien
 \end{itemize}
 
 \section{Systèmes de gestion de contenu}
@@ -380,31 +402,51 @@ Nous en avons identifié trois : La modélisation et la simulation, les
 
 \begin{itemize}[label=$\bullet$]
   \item Petite histoire des CMS
-  \item donner la proportion de site web créer à partir de CMS
+  \item donner la proportion des sites web créer à partir de CMS
+  \item difficile d'avoir une vue d'ensemble non biaisé, mais certaines ressources feront l'affaire \cite{barker_web_2016}
 \end{itemize}
 
 \subsection*{Les outils proches de notre concept}
 
 \begin{itemize}[label=$\bullet$]
   \item Parler des CMS qui créent des applications web
-  \item Parler d'Anvil
-  \item Parler d'Amazon Honeycode.
+  \item Parler d'Anvil \cite{anvil_team_overview_nodate}
+  \item Parler de Streamlit \cite{streamlit_team_streamlit_nodate}
+  \item Parler d'Amazon Honeycode. \cite{honeycode_team_no-code_nodate}
 \end{itemize}
 
 \section{Les systèmes distribués}
 
+\begin{itemize}
+  \item Parler des paradigmes liés en se basant sur des livres scientifiques \cite*{tanenbaum_distributed_2007} \cite*{coulouris_distributed_2012}
+  \item Parler ensuite de l'approche plus récente à l'aide des conteneurs et des gestionnaires \cite*{burns_designing_2018} \cite*{kleppmann_designing_2017}
+\end{itemize}
+
 \chapter{Analyse globale}
 
 \begin{itemize}[label=$\bullet$]
-  \item The first item of the list.
+  \item Reprendre les papiers de M. Santucci et M. Capocchi \cite*{capocchi_devs_2022} \cite*{capocchi_towards_2023}
+  \item Présenter à partir de là le fonctionnement global attendu de l'application
+  \item s'aider de plusieurs schémas avec légende pour expliquer le concept
 \end{itemize}
+
+{ \color{green}
+exemple de schéma réalisé à l'aide de Draw.io (à améliorer)
+}
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=10cm]{figures/architecture_global.pdf}
+  \includegraphics[width=15cm]{figures/architecture_global.pdf}
   \caption{Fonctionnement global du projet}
   \label{fig:fonctionnement-lobal-projet}
 \end{figure}
+
+exemple de légende possible
+\begin{enumerate}
+  \item description 1
+  \item description 2
+  \item description 3
+\end{enumerate}
 
 \chapter{Analyse des composants individuels}
 
@@ -416,25 +458,12 @@ Nous en avons identifié trois : La modélisation et la simulation, les
 
 \section{L'application Eledone}
 
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=10cm]{figures/eledone.pdf}
-  \caption{Schéma d'analyse d'Eledone}
-  \label{fig:analyse-eledone}
-\end{figure}
 
 \subsection*{Front-end}
 
 \subsection*{Back-end}
 
 \section{Les micro-apps générer par Eledone}
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=10cm]{figures/eledone.pdf}
-  \caption{Schéma d'analyse d'une micro-app}
-  \label{fig:analyse-micro-app}
-\end{figure}
 
 \subsection*{Front-end}
 
@@ -449,7 +478,7 @@ Nous en avons identifié trois : La modélisation et la simulation, les
 \part{Conception}
 
 \begin{itemize}[label=$\bullet$]
-  \item The first item of the list.
+  \item Étudier les enjeux lier à la conception et faire le lien avec la partie Analyse
 \end{itemize}
 
 \chapter{Conception globale}
@@ -481,36 +510,25 @@ Nous en avons identifié trois : La modélisation et la simulation, les
 \chapter{Pistes de réalisation}
 
 \begin{itemize}[label=$\bullet$]
-  \item The first item of the list.
+  \item Listé des ressources d'apprentissage lié aux compétences nécessaire eu développement du projet
 \end{itemize}
 
 \chapter{Pistes d'évaluation}
 
 \begin{itemize}[label=$\bullet$]
-  \item The first item of the list.
+  \item Discuter des possibilités de tests pour chaque élément.
 \end{itemize}
 
 \chapter{Projets annexes / améliorations possibles}
 
 \begin{itemize}[label=$\bullet$]
-  \item The first item of the list.
+  \item Parler de l'objectif de transformer Eledone en un outil complet de développement et d'export de simulations
+  \item envisager les possibilités de faire une version d'Eledone pour l'intelligence artificielle
 \end{itemize}
-
-\bookmarksetup{startatroot}
-
-% ====================== FIN ==========================
-
-\chapter*{Conclusion}  % no number
-\addcontentsline{toc}{chapter}{Conclusion}
-
-\begin{itemize}[label=$\bullet$]
-  \item The first item of the list.
-\end{itemize}% add it to the ToC
-
 
 \cleardoublepage
 
-
+\bookmarksetup{startatroot}
 
 \printbibliography[
   heading=bibintoc,
